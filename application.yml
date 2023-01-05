@@ -1,0 +1,20 @@
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    
+    
+    
+microservices:
+  football-service:
+    endpoints:
+      endpoint:
+        uri: http://GATEWAY-SERVICE/footballplayer/name/
+  PAYMENT-SERVICE:
+    endpoints:
+      endpoint:
+        uri: http://GATEWAY-SERVICE/api/payment    
